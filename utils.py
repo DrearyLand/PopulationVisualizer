@@ -17,4 +17,15 @@ def population_by_country(data, country):
     result = list(filter(lambda item: item['Country/Territory'] == country, data))
     return result
 
+def get_population_percentage(data):
+    country_percentage = {}
+    for i in range(len(data)):
+        country_percentage[data[i]['Country/Territory']] = float(data[i]['World Population Percentage'])
+    keys = country_percentage.keys()
+    values = country_percentage.values()
+    return keys, values
+        
+        
+    
+
 
